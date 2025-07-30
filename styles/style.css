@@ -16,4 +16,9 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-text__font-family);
+  background-image: var(--background-image__gradient-vertical), var(--background-image__gradient-horizont), var(--background-image__gradient-linear);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

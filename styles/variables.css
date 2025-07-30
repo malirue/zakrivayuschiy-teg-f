@@ -10,4 +10,25 @@
     --main-text__font-size: 18px; /*относителтные укаать?*/
     --main-text__font-weight: 410;
     --main-text__title-font-weight: 715;
+
+    /*градиент*/
+    
+    --background-image__gradient-vertical:
+    repeating-linear-gradient(
+      0deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      rgba(211, 211, 211, 0) 2px,
+      rgba(211, 211, 211, 0) 4px
+    );
+    --background-image__gradient-horizont: 
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      rgba(211, 211, 211, 0) 2px,
+      rgba(211, 211, 211, 0) 4px
+    );
+    --background-image__gradient-linear: 
+    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
 }
