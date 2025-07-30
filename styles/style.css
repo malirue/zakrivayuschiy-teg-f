@@ -21,4 +21,32 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: var(--main-block__width);
+  height: var(--header__block-height);
+  background-color: var(--main-block__background-color);
+  font-family: var(--accent-text__font-family);
+  text-transform: uppercase;
+}
+
+.header__title {
+  font-size: var(--accent-text__title-font-size);
+  
+  line-height: 100%;
+}
+
+.header__subtitle {
+  font-size: var(--accent-text__font-size);
+  font-weight: var(--accent-text__font-weight);
 }

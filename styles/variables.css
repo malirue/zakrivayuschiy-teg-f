@@ -3,16 +3,22 @@
 :root {
     /*шрифты*/
     --accent-text__font-family: "Press Start 2P", sans-serif;
-    --accent-text__font-size: 14px; /*относителтные укаать?*/
-    --accent-text__title-font-size: 49px;
+    --accent-text__font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+    --accent-text__title-font-size: clamp(3rem, 2.626rem + 1.596vw, 4.063rem);
+    --accent-text__font-weight: 400;
 
     --main-text__font-family: "Inter", sans-serif;
     --main-text__font-size: 18px; /*относителтные укаать?*/
     --main-text__font-weight: 410;
     --main-text__title-font-weight: 715;
 
-    /*градиент*/
+    /*разметка общая*/
+    --main-block__width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
+    --main-block__background-color: #FFFFFF;
+    /*разметка header*/
+    --header__block-height: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
     
+    /*градиент*/
     --background-image__gradient-vertical:
     repeating-linear-gradient(
       0deg,
@@ -30,5 +36,9 @@
       rgba(211, 211, 211, 0) 4px
     );
     --background-image__gradient-linear: 
-    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+    linear-gradient(
+      to bottom, 
+      rgba(231, 231, 231, 0) 0.01%, 
+      #e7e7e7 0.01%, 
+      #1a1a1a);
 }
