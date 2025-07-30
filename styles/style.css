@@ -13,40 +13,114 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-family: var(--main-text__font-family);
-  background-image: var(--background-image__gradient-vertical), var(--background-image__gradient-horizont), var(--background-image__gradient-linear);
+    min-inline-size: 320px;
+    min-block-size: 100dvb;
+    font-family: var(--main-text__font-family);
+    background-image: var(--background-image__gradient-vertical),
+        var(--background-image__gradient-horizont),
+        var(--background-image__gradient-linear);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: var(--main-block__width);
-  height: var(--header__block-height);
-  background-color: var(--main-block__background-color);
-  font-family: var(--accent-text__font-family);
-  text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-block-start: 100px;
+    margin-block-end: 100px;
+    min-width: var(--main-block__width);
+    min-height: var(--header__block-height);
+    border: var(--main-block__border);
+    background-color: var(--main-block__background-color);
+    font-family: var(--accent-text__font-family);
+    text-transform: uppercase;
 }
 
 .header__title {
-  font-size: var(--accent-text__title-font-size);
-  
-  line-height: 100%;
+    font-size: var(--accent-text__title-font-size);
+    line-height: 100%;
+    margin-block-start: var(--header__title-margin);
 }
 
 .header__subtitle {
-  font-size: var(--accent-text__font-size);
-  font-weight: var(--accent-text__font-weight);
+    font-size: var(--accent-text__font-size);
+    font-weight: var(--accent-text__font-weight);
+    margin-block-end: var(--header__title-margin);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--main-block__width);
+    background-color: var(--main-block__background-color);
+    border: var(--main-block__border);
+}
+
+.card__title {
+    font-size: var(--main-text__font-size);
+    font-weight: var(--main-text__title-font-weight);
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+    margin-block-start: 4px;
+    margin-block-end: 4px;
+}
+
+.card__image {
+}
+
+.card__image_basic {
+    display: block;
+    max-width: var(--main-block__width);
+    object-fit: cover;
+}
+
+.card__content {
+    margin-inline-start: var(--card-content__margin);
+    margin-inline-end: var(--card-content__margin);
+    margin-block-start: var(--card-content__margin);
+    margin-block-end: var(--card-content__margin);
+}
+
+.card__bottons-zone {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-inline-end: var(--card-content__margin);
+    margin-block-end: var(--card-content__margin);
+}
+
+.like-icon {
+    /*для svg-иконки анимированного сердца*/
+}
+
+.card__icon-button {
+    /*для кнопки, оборачивающей иконку*/
+    background-color: transparent;
+    border: initial;
+}
+
+.card__like-button {
+    /*для кнопки Like рядом с иконкой*/
+    min-width: 130px;
+    min-height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: var(--main-block__border);
+}
+
+.button__text {
+    font-family: var(--accent-text__font-family);
+    font-weight: var(--accent-text__font-weight);
+    font-size: var(--accent-text__font-size);
 }
