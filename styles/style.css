@@ -127,18 +127,21 @@ p {
 
 .card__icon-button {
     /*для кнопки, оборачивающей иконку*/
-    background-color: #fff;
+    background-color: initial;
     border: initial;
+}
+
+.card__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
 }
 
 .card__like-button {
     /*для кнопки Like рядом с иконкой*/
     min-width: 130px;
     min-height: 38px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
     border: var(--main-block__border);
 }
 
@@ -169,13 +172,37 @@ p {
     height: 28px;
 }
 
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.7);
+}
+
+.archive-dialog {
+    min-width: clamp(21.313rem, 21.048rem + 1.127vw, 22.063rem);
+    min-height: 191px;
+    background-color: #fff;
+    font-family: var(--accent-text__font-family);
+    font-size: var(--accent-text__font-size);
+    display: grid;
+    row-gap: 12px;
+    column-gap: 30px;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    margin-block-start: 30px;
+    margin-block-end: 30px;
+}
+
+.archive-dialog svg {
+    width: 39px;
+    height: 39px;
+}
+
 @supports (-webkit-text-stroke: 1px #fff) {
     .card__image-label {
         text-stroke: 1px #fff;
     }
 }
 
-@media (width>=720px) {
+@media (width>=500px) {
     .button__archive .button__text {
         flex-direction: row;
     }
