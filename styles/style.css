@@ -63,6 +63,7 @@
     max-width: var(--main-block__width);
     background-color: var(--main-block__background-color);
     border: var(--main-block__border);
+    margin-block-end: 50px;
 }
 
 .card__title {
@@ -70,11 +71,26 @@
     font-weight: var(--main-text__title-font-weight);
     margin-inline-start: 10px;
     margin-inline-end: 10px;
-    margin-block-start: 4px;
+    margin-block-start: 8px;
     margin-block-end: 4px;
+    line-height: 110%;
 }
 
 .card__image {
+    position: relative;
+}
+
+.card__image-label {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-family: var(--accent-text__font-family);
+    font-size: 14px;
+    font-weight: var(--accent-text__font-weight);
+    line-height: 100%;
+    mix-blend-mode: hard-light;
+    opacity: 0.5;
+    -webkit-text-stroke: 1px #fff;
 }
 
 .card__image_basic {
@@ -87,7 +103,12 @@
     margin-inline-start: var(--card-content__margin);
     margin-inline-end: var(--card-content__margin);
     margin-block-start: var(--card-content__margin);
-    margin-block-end: var(--card-content__margin);
+    font-size: var(--main-text__font-size);
+    line-height: 110%;
+}
+
+p {
+    margin-block-end: calc(var(--card-content__margin) - 2px);
 }
 
 .card__bottons-zone {
@@ -95,11 +116,13 @@
     align-items: flex-start;
     justify-content: flex-end;
     margin-inline-end: var(--card-content__margin);
-    margin-block-end: var(--card-content__margin);
+    margin-block-end: calc(var(--card-content__margin) - 4px);
 }
 
 .like-icon {
     /*для svg-иконки анимированного сердца*/
+    min-width: 27px;
+    min-height: 24px;
 }
 
 .card__icon-button {
@@ -123,4 +146,10 @@
     font-family: var(--accent-text__font-family);
     font-weight: var(--accent-text__font-weight);
     font-size: var(--accent-text__font-size);
+}
+
+@supports (-webkit-text-stroke: 1px #fff) {
+    .card__image-label {
+        text-stroke: 1px #fff;
+    }
 }
