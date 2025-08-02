@@ -147,6 +147,7 @@ p {
 
 .card__bottons-zone {
     display: flex;
+    position: relative;
     align-items: flex-start;
     justify-content: flex-end;
     margin-inline-end: var(--card-content__margin);
@@ -163,6 +164,16 @@ p {
     /*для кнопки, оборачивающей иконку*/
     background-color: initial;
     border: initial;
+    padding: 0;
+    margin-inline-end: 7px;
+}
+
+.card__icon-button:focus {
+    outline: var(--main-block__border);
+}
+
+.card__icon-button:focus-visible {
+    outline: var(--main-block__border);
 }
 
 .button {
@@ -171,7 +182,40 @@ p {
     align-items: center;
     background-color: #fff;
     border: var(--main-block__border);
+    transition: 0.3s ease;
+    overflow: hidden;
 }
+
+/*ведется воспитательная работа по заполнению кнопок по навелению*/
+
+.button::before {
+    content: " ";
+    top: 0;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    transform: translate(100%, 0);
+    transition: 0.5s ease-in-out;
+    height: 38px;
+    background-color: var(--accent-color);
+    
+}
+
+.button:hover::before {
+  overflow: hidden;
+    width: 100%;
+}
+
+.button:focus {
+    box-shadow: 2px 2px;
+}
+
+.button:focus-visible {
+    outline: initial;
+    box-shadow: 2px 2px;
+}
+
+/*вот до этого места*/
 
 .card__like-button {
     /*для кнопки Like рядом с иконкой*/
