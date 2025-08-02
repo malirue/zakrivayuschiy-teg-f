@@ -78,10 +78,14 @@
 
 .card__image {
     position: relative;
+    overflow: hidden;
+    border-top: var(--main-block__border);
+    border-bottom: var(--main-block__border);
 }
 
 .card__image-label {
     position: absolute;
+    z-index: 1;
     top: 25px;
     right: 25px;
     font-family: var(--accent-text__font-family);
@@ -94,8 +98,9 @@
 }
 
 .card__image_basic {
-    display: block;
-    max-width: var(--main-block__width);
+    width: 100%;
+    height: 100%;
+    display: flex;
     object-fit: cover;
 }
 
