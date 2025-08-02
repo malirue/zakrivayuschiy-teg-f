@@ -99,6 +99,35 @@
     object-fit: cover;
 }
 
+.card__image_grayscal {
+    filter: grayscale(60%);
+}
+
+.card__image_saturate {
+    filter: saturate(300%);
+}
+
+.card__image_hue-rotate {
+    filter: hue-rotate(30deg);
+}
+
+.card__image_invert {
+    filter: invert(0.8);
+}
+
+.card__image_sepia {
+    filter: sepia(100%);
+}
+
+.card__image_blur {
+    filter: blur(0.5rem);
+}
+
+.card__image_multiple {
+    filter: sepia(10%) blur(0.1rem) hue-rotate(80deg) saturate(120%)
+        grayscale(30%) invert(20%) contrast(120%);
+}
+
 .card__content {
     margin-inline-start: var(--card-content__margin);
     margin-inline-end: var(--card-content__margin);
