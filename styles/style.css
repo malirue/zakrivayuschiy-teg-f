@@ -131,18 +131,18 @@ p {
     border: initial;
 }
 
-.card__button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    border: var(--main-block__border);
 }
 
 .card__like-button {
     /*для кнопки Like рядом с иконкой*/
     min-width: 130px;
     min-height: 38px;
-    border: var(--main-block__border);
 }
 
 .button__text {
@@ -164,7 +164,6 @@ p {
 }
 
 .button__archive {
-    border: var(--main-block__border);
 }
 
 .button__archive svg {
@@ -176,15 +175,23 @@ dialog::backdrop {
     background-color: rgb(0 0 0 / 0.7);
 }
 
+dialog {
+    max-width: 353px;
+}
+
 .archive-dialog {
-    min-width: clamp(21.313rem, 21.048rem + 1.127vw, 22.063rem);
-    min-height: 191px;
     background-color: #fff;
     font-family: var(--accent-text__font-family);
     font-size: var(--accent-text__font-size);
     display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: auto auto;
+    grid-auto-flow: row;
     row-gap: 12px;
     column-gap: 30px;
+    row-gap: 30px;
+    align-items: center;
+    align-content: center;
     margin-inline-start: 40px;
     margin-inline-end: 40px;
     margin-block-start: 30px;
@@ -194,6 +201,19 @@ dialog::backdrop {
 .archive-dialog svg {
     width: 39px;
     height: 39px;
+}
+
+.archive-dialog button {
+    grid-column: span 2;
+    max-height: 38px;
+    padding-block-start: 12px;
+    padding-block-end: 12px;
+}
+
+.archive-dialog span {
+    text-transform: uppercase;
+    line-height: 120%;
+    font-size: 14px;
 }
 
 @supports (-webkit-text-stroke: 1px #fff) {
