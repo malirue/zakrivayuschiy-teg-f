@@ -184,6 +184,8 @@ p {
     border: var(--main-block__border);
     transition: 0.3s ease;
     overflow: hidden;
+    position: relative;
+    z-index: 0;
 }
 
 /*ведется воспитательная работа по заполнению кнопок по навелению*/
@@ -194,16 +196,18 @@ p {
     left: 0;
     position: absolute;
     cursor: pointer;
-    transform: translate(100%, 0);
-    transition: 0.5s ease-in-out;
-    height: 38px;
+    height: 100%;
+    width: 100%;
     background-color: var(--accent-color);
-    
+    transition: 0.5s ease-in-out;
+}
+
+.button:not(:hover)::before {
+    transform: translate(-100%, 0);
 }
 
 .button:hover::before {
-  overflow: hidden;
-    width: 100%;
+    transform: translate(0, 0);
 }
 
 .button:focus {
