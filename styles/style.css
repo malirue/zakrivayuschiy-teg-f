@@ -207,8 +207,8 @@ p {
     transform: translate(0, 0);
 }
 
-button:hover .button__text  {
-  z-index: 1;
+button:hover .button__text {
+    z-index: 1;
 }
 
 .button:focus {
@@ -253,6 +253,8 @@ button:hover .button__text  {
 .button__archive svg {
     width: 28px;
     height: 28px;
+    filter: invert(100%);
+    mix-blend-mode: difference;
 }
 
 dialog::backdrop {
@@ -285,8 +287,6 @@ dialog {
 .archive-dialog svg {
     width: 39px;
     height: 39px;
-    fill: #fff;
-    mix-blend-mode: difference;
 }
 
 .archive-dialog button {
