@@ -6,12 +6,13 @@
     --accent-text__font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
     --accent-text__title-font-size: clamp(3rem, 2.626rem + 1.596vw, 4.063rem);
     --accent-text__font-weight: 400;
-    
 
     --main-text__font-family: "Inter", sans-serif;
     --main-text__font-size: 19px;
     --main-text__font-weight: 410;
     --main-text__title-font-weight: 715;
+
+    --button-text-color: #fff;
 
     /*разметка общая*/
     --accent-color: #000000;
