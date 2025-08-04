@@ -154,11 +154,92 @@ p {
     margin-block-end: calc(var(--card-content__margin) - 4px);
 }
 
+/*анимированное сердце*/
+
 .like-icon {
     /*для svg-иконки анимированного сердца*/
     min-width: 27px;
     min-height: 24px;
 }
+
+.main-body,
+.core {
+    fill: transparent;
+}
+
+.main-body {
+    transition: 0.3s linear;
+}
+
+.core {
+    transition: 0.3s linear 0.03s;
+}
+
+.contour {
+    fill: var(--contour-fill-color);
+    transition: 0.1s linear;
+}
+
+.sparks {
+    fill: var(--animation-fill-color);
+    opacity: 0;
+}
+
+.is-liked .sparks {
+    animation-name: sparks;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-delay: 0.3s;
+    animation-fill-mode: none;
+}
+
+.like-icon:hover .core {
+    fill: var(--contour-fill-color);
+    transition: 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+    fill: var(--contour-fill-color);
+    transition: 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+    fill: var(--animation-fill-color);
+    transition: 0.3s linear;
+}
+
+.like-icon:active .main-body {
+    fill: var(--animation-fill-color);
+    transition: 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+    fill: var(--animation-fill-color);
+    transition: 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .core {
+    fill: var(--animation-fill-color);
+    transition: 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+    fill: var(--animation-fill-color);
+    transition: 0.3s linear 0.05s;
+}
+
+.is-liked .heart {
+    animation-name: scaling;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-delay: 0.1s;
+    animation-fill-mode: none;
+    transform-origin: center;
+}
+
+/*зона анимированного сердца закончилась*/
 
 .card__icon-button {
     /*для кнопки, оборачивающей иконку*/
@@ -169,7 +250,7 @@ p {
 }
 
 .card__icon-button:focus {
-    outline: var(--main-block__border);
+    outline: none;
 }
 
 .card__icon-button:focus-visible {
