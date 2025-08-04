@@ -1,4 +1,3 @@
-
 .page {
     min-inline-size: 320px;
     min-block-size: 100dvb;
@@ -129,7 +128,7 @@
 }
 
 p {
-    margin-block-end: calc(var(--card-content__margin) - 2px);
+    margin-block-end: calc(var(--card-content__margin) - 1px);
 }
 
 .card__bottons-zone {
@@ -315,9 +314,6 @@ button:hover .button__text {
     padding-block-end: 15px;
 }
 
-.button__archive {
-}
-
 .button__archive svg {
     width: 28px;
     height: 28px;
@@ -377,6 +373,18 @@ dialog {
 }
 
 @media (width>=500px) {
+    .header {
+        margin-block-end: 94px;
+    }
+
+    .card__title {
+        margin-block-end: 2px;
+    }
+
+    .card__content {
+        margin-block-start: calc(var(--card-content__margin) - 3px);
+    }
+
     .button__archive .button__text {
         flex-direction: row;
     }
