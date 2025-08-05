@@ -22,7 +22,7 @@
     align-items: center;
     gap: 20px;
     margin-block-start: 100px;
-    margin-block-end: 98px;
+    margin-block-end: 100px;
     min-width: var(--main-block__width);
     min-height: var(--header__block-height);
     border: var(--main-block__border);
@@ -137,13 +137,12 @@ p {
     align-items: flex-start;
     justify-content: flex-end;
     margin-inline-end: var(--card-content__margin);
-    margin-block-end: calc(var(--card-content__margin) - 4px);
+    margin-block-end: calc(var(--card-content__margin) - 2px);
 }
 
 /*анимированное сердце*/
 
 .like-icon {
-    /*для svg-иконки анимированного сердца*/
     min-width: 27px;
     min-height: 24px;
 }
@@ -228,13 +227,16 @@ p {
 /*зона анимированного сердца закончилась*/
 
 .card__icon-button {
-    /*для кнопки, оборачивающей иконку*/
+    max-width: 36px;
+    max-height: 34px;
+    margin-block-start: 2px;
+    margin-inline-end: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: initial;
     border: initial;
-    padding: 0;
-    margin-inline-end: 7px;
 }
-
 .card__icon-button:focus {
     outline: none;
 }
@@ -288,7 +290,6 @@ button:hover .button__text {
 }
 
 .card__like-button {
-    /*для кнопки Like рядом с иконкой*/
     min-width: 130px;
     min-height: 38px;
 }
@@ -383,6 +384,10 @@ dialog {
 
     .card__content {
         margin-block-start: calc(var(--card-content__margin) - 3px);
+    }
+
+    .card__bottons-zone {
+        margin-block-end: var(--card-content__margin);
     }
 
     .button__archive .button__text {
