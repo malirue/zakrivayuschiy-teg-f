@@ -338,7 +338,6 @@ dialog {
     grid-template-columns: auto auto;
     grid-auto-rows: auto auto;
     grid-auto-flow: row;
-    row-gap: 12px;
     column-gap: 30px;
     row-gap: 30px;
     align-items: center;
