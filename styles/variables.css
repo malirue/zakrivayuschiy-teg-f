@@ -8,11 +8,12 @@
     --accent-text__font-weight: 400;
 
     --main-text__font-family: "Inter", sans-serif;
-    --main-text__font-size: 19px;
+    --main-text__font-size: 18px;
     --main-text__font-weight: 410;
     --main-text__title-font-weight: 715;
 
     --button-text-color: #fff;
+    --outline-text-color: #fff;
 
     /*разметка общая*/
     --accent-color: #000000;

@@ -43,22 +43,28 @@
     margin-block-end: var(--header__title-margin);
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
 .card {
     display: flex;
     flex-direction: column;
     max-width: var(--main-block__width);
     background-color: var(--main-block__background-color);
     border: var(--main-block__border);
-    margin-block-end: 50px;
 }
 
 .card__title {
+    font-variation-settings: "wght" var(--main-text__title-font-weight);
     font-size: var(--main-text__font-size);
-    font-weight: var(--main-text__title-font-weight);
     margin-inline-start: 10px;
     margin-inline-end: 10px;
     margin-block-start: 8px;
-    margin-block-end: 4px;
+    margin-block-end: 3px;
     line-height: 110%;
 }
 
@@ -80,7 +86,10 @@
     line-height: 100%;
     mix-blend-mode: hard-light;
     opacity: 0.5;
-    -webkit-text-stroke: 1px #fff;
+    text-shadow: -1px -1px 0 var(--outline-text-color),
+        1px -1px 0 var(--outline-text-color),
+        -1px 1px 0 var(--outline-text-color),
+        1px 1px 0 var(--outline-text-color);
 }
 
 .card__image_basic {
@@ -123,8 +132,10 @@
     margin-inline-start: var(--card-content__margin);
     margin-inline-end: var(--card-content__margin);
     margin-block-start: var(--card-content__margin);
+    font-variation-settings: "wght" var(--main-text__font-weight);
     font-size: var(--main-text__font-size);
-    line-height: 110%;
+    line-height: 117%;
+    word-spacing: 9%;
 }
 
 p {
@@ -137,6 +148,7 @@ p {
     align-items: flex-start;
     justify-content: flex-end;
     margin-inline-end: var(--card-content__margin);
+
     margin-block-end: calc(var(--card-content__margin) - 2px);
 }
 
@@ -316,8 +328,6 @@ button:hover .button__text {
 }
 
 .button__archive svg {
-    width: 28px;
-    height: 28px;
     filter: invert(100%);
     mix-blend-mode: difference;
 }
@@ -367,9 +377,17 @@ dialog {
     line-height: 120%;
 }
 
-@supports (text-stroke: 1px #fff) {
+@supports (-webkit-text-stroke: 1px var(--outline-text-color)) {
     .card__image-label {
-        text-stroke: 1px #fff;
+        text-shadow: none;
+        -webkit-text-stroke: 1px var(--outline-text-color);
+    }
+}
+
+@supports (text-stroke: 1px var(--outline-text-color) {
+    .card__image-label {
+        text-shadow: none;
+        text-stroke: 1px var(--outline-text-color);
     }
 }
 
