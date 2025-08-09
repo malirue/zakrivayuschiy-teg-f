@@ -24,7 +24,6 @@
     margin-block-start: 100px;
     margin-block-end: 100px;
     min-width: var(--main-block__width);
-    min-height: var(--header__block-height);
     border: var(--main-block__border);
     background-color: var(--main-block__background-color);
     font-family: var(--accent-text__font-family);
@@ -315,6 +314,10 @@ button:hover .button__text {
     mix-blend-mode: difference;
 }
 
+.archive {
+    margin-block-end: 100px;
+}
+
 .button__archive .button__text {
     display: flex;
     flex-direction: column;
@@ -377,27 +380,9 @@ dialog {
     line-height: 120%;
 }
 
-@supports (-webkit-text-stroke: 1px var(--outline-text-color)) {
-    .card__image-label {
-        text-shadow: none;
-        -webkit-text-stroke: 1px var(--outline-text-color);
-    }
-}
-
-@supports (text-stroke: 1px var(--outline-text-color) {
-    .card__image-label {
-        text-shadow: none;
-        text-stroke: 1px var(--outline-text-color);
-    }
-}
-
 @media (width>=500px) {
     .header {
-        margin-block-end: 94px;
-    }
-
-    .card__title {
-        margin-block-end: 2px;
+        margin-block-end: 92px;
     }
 
     .card__content {
@@ -415,5 +400,19 @@ dialog {
     .button__archive svg {
         width: 21px;
         height: 21px;
+    }
+}
+
+@supports (-webkit-text-stroke: 1px var(--outline-text-color)) {
+    .card__image-label {
+        text-shadow: none;
+        -webkit-text-stroke: 1px var(--outline-text-color);
+    }
+}
+
+@supports (text-stroke: 1px var(--outline-text-color) {
+    .card__image-label {
+        text-shadow: none;
+        text-stroke: 1px var(--outline-text-color);
     }
 }
